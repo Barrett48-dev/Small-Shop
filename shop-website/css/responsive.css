@@ -1,0 +1,27 @@
+/* ==========================================================
+   responsive.css - breakpoints (desktop-first)
+   ========================================================== */
+@media (max-width:1200px){ .grid{grid-template-columns:repeat(3,1fr)} .features{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))} }
+
+@media (max-width:860px){
+  /* hamburger navigation */
+  .nav-toggle{display:flex}
+  .nav-links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:.3rem;padding:0 1rem;background:rgba(10,14,26,.94);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .4s var(--ease),opacity .3s,padding .3s,visibility .4s}
+  .nav-links.open{max-height:420px;opacity:1;visibility:visible;padding:1rem}
+  .nav-links a:not(.btn){padding:.9rem 1rem}
+  .nav-links .btn{margin-top:.4rem}
+  .hero{grid-template-columns:1fr;gap:2rem;padding-block:2.5rem}
+  .hero-visual{transform:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .split,.contact-grid,.pm{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  section{padding:2.5rem 0}
+}
+
+@media (max-width:520px){
+  .grid{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .btn-row .btn{flex:1 1 100%}
+  .cta{padding:2rem 1rem}
+  .pm{padding:.8rem}
+}

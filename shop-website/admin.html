@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Messages</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="admin" data-title="Messages">
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+<section class="container page-head">
+  <h1>Messages</h1>
+  <p class="lead">Messages sent from the contact form. Only the shop owner should open this page.</p>
+</section>
+<section class="container tight">
+  <form id="login" class="glass form login" novalidate>
+    <div class="field"><label for="pw">Admin password</label><input id="pw" type="password" autocomplete="current-password"></div>
+    <small class="err" id="login-err" role="alert"></small>
+    <div class="btn-row"><button class="btn btn-primary" type="submit">Open inbox</button></div>
+  </form>
+  <div id="inbox" hidden>
+    <div class="btn-row inbox-tools">
+      <button class="btn btn-ghost" id="refresh" type="button">Refresh</button>
+      <button class="btn btn-ghost" id="logout" type="button">Log out</button>
+    </div>
+    <p id="inbox-count" class="muted" aria-live="polite"></p>
+    <div id="msg-list" class="msg-list"></div>
+  </div>
+</section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

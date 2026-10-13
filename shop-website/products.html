@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products</title>
+<meta name="description" content="Browse our product catalogue and order on WhatsApp.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="products" data-title="Products">
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+<section class="container page-head">
+  <h1>Products</h1>
+  <p class="lead">Browse the catalogue, then tap "Order on WhatsApp" and we will confirm stock and delivery.</p>
+  <div class="tools">
+    <label class="sr-only" for="search">Search products</label>
+    <input id="search" type="search" placeholder="Search products" autocomplete="off">
+    <div id="filters" class="chips" role="group" aria-label="Filter by category"></div>
+  </div>
+  <p id="count" class="muted" aria-live="polite"></p>
+</section>
+<section class="container tight">
+  <div class="grid" id="product-grid"></div>
+</section>
+
+<dialog id="product-modal" aria-labelledby="pm-title">
+  <div class="pm glass">
+    <button class="pm-close" id="pm-close" aria-label="Close product details">&times;</button>
+    <div class="pm-gallery"><img id="pm-img" data-ph="Product" alt=""><div id="pm-thumbs" class="thumbs"></div></div>
+    <div class="pm-info">
+      <p id="pm-cat" class="cat"></p>
+      <h2 id="pm-title"></h2>
+      <p id="pm-price" class="price big"></p>
+      <p id="pm-stock"></p>
+      <p id="pm-desc" class="lead"></p>
+      <div class="btn-row">
+        <a id="pm-wa" class="btn btn-primary" target="_blank" rel="noopener" href="#"><span class="icon" data-icon="wa"></span>Order on WhatsApp</a>
+        <button id="pm-back" class="btn btn-ghost" type="button">Back to Products</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact</title>
+<meta name="description" content="Phone, WhatsApp, email, address and opening hours.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contact" data-title="Contact">
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header id="site-header" class="site-header"></header>
+<main id="main">
+<section class="container page-head">
+  <h1>Contact us</h1>
+  <p class="lead">Questions about a product or an order? Reach us any way you like.</p>
+</section>
+<section class="container tight contact-grid">
+  <div class="glass info">
+    <h2>Contact information</h2>
+    <ul class="info-list" id="contact-info"></ul>
+    <h3>Opening hours</h3>
+    <ul class="hours" id="contact-hours"></ul>
+  </div>
+  <form class="glass form" id="contact-form" novalidate>
+    <h2>Send a message</h2>
+    <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" aria-describedby="e-name"><small class="err" id="e-name"></small></div>
+    <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" aria-describedby="e-email"><small class="err" id="e-email"></small></div>
+    <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="e-phone"><small class="err" id="e-phone"></small></div>
+    <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="5" aria-describedby="e-msg"></textarea><small class="err" id="e-msg"></small></div>
+    <div class="hp" aria-hidden="true"><label for="f-web">Leave this empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+    <p class="muted small">Your message goes straight to the shop. Prefer WhatsApp? You can send it there instead.</p>
+    <p id="form-status" class="status" role="status" aria-live="polite"></p>
+    <div class="btn-row">
+      <button class="btn btn-primary" type="submit" value="send">Send message</button>
+      <button class="btn btn-ghost" type="submit" value="wa">Send via WhatsApp</button>
+    </div>
+  </form>
+</section>
+<section class="container reveal">
+  <h2>Find us</h2>
+  <!-- Replace this placeholder with the Google Maps embed <iframe> (Maps > Share > Embed a map) -->
+  <div class="glass map" id="map"><p>Map placeholder<br><span class="muted" data-cfg="address"></span></p></div>
+</section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>
