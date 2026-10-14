@@ -38,7 +38,8 @@ const FILTERS = [
 ];
 
 /* ---------- rendering ---------- */
-const imgOf = p => p.image || placeholder(p.name, p.id);
+const safeAssetPath = src => src ? encodeURI(src) : src;
+const imgOf = p => safeAssetPath(p.image || placeholder(p.name, p.id));
 
 function cardHTML(p) {
   return '<article class="product reveal">' +
@@ -94,12 +95,13 @@ if (gridEl) {
     const p = PRODUCTS.find(x => x.id === id); if (!p) return;
     const pics = [imgOf(p)].concat(p.images || []);
     const show = (src, i) => {
+      const safeSrc = safeAssetPath(src);
       mainImg.removeAttribute("data-fb"); mainImg.dataset.ph = p.name;
-      mainImg.src = src; mainImg.alt = p.name + (pics.length > 1 ? " - photo " + (i + 1) : "");
+      mainImg.src = safeSrc; mainImg.alt = p.name + (pics.length > 1 ? " - photo " + (i + 1) : "");
       document.querySelectorAll("#pm-thumbs button").forEach((b, j) => b.setAttribute("aria-current", j === i));
     };
     document.getElementById("pm-thumbs").innerHTML = pics.length > 1
-      ? pics.map((s, i) => '<button type="button" aria-label="Show photo ' + (i + 1) + '"><img src="' + esc(s) + '" data-ph="' + esc(p.name) + '" alt=""></button>').join("") : "";
+      ? pics.map((s, i) => '<button type="button" aria-label="Show photo ' + (i + 1) + '"><img src="' + esc(safeAssetPath(s)) + '" data-ph="' + esc(p.name) + '" alt=""></button>').join("") : "";
     document.querySelectorAll("#pm-thumbs button").forEach((b, i) => b.addEventListener("click", () => show(pics[i], i)));
     show(pics[0], 0);
     document.getElementById("pm-cat").textContent = p.category;
