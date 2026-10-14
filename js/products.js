@@ -59,7 +59,7 @@ function render(el, list, emptyMsg) {
 
 /* ---------- home page: featured ---------- */
 const featuredEl = document.getElementById("featured-grid");
-if (featuredEl) render(featuredEl, PRODUCTS.filter(p => p.featured).slice(0, 6), "No featured products yet.");
+if (featuredEl) render(featuredEl, PRODUCTS.filter(p => p.featured && p.image).slice(0, 6), "No featured products yet.");
 
 /* ---------- products page ---------- */
 const gridEl = document.getElementById("product-grid");
@@ -72,6 +72,7 @@ if (gridEl) {
   function update() {
     const f = FILTERS[state.filter], q = state.q.trim().toLowerCase();
     const list = PRODUCTS.filter(p =>
+      p.image &&
       (!f.tag || (p.tags || []).includes(f.tag)) &&
       (!f.category || p.category === f.category) &&
       (!q || (p.name + " " + p.description + " " + p.category).toLowerCase().includes(q)));

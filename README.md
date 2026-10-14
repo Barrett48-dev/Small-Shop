@@ -1,7 +1,5 @@
 # Shop Website
 
-A static, framework-free website (HTML, CSS, vanilla JS) for a small local shop with WhatsApp ordering.
-
 ## Run it
 Run `npm start` and open http://localhost:3000 (see "Contact form and backend" below). Opening `index.html` directly works for browsing, but the contact form needs the server.
 
