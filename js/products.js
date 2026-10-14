@@ -16,6 +16,18 @@ const PRODUCTS = [
   { id: 8, name: "Storage Baskets (3)", category: "Home & Living", price: 11000, image: "", images: [], description: "Woven baskets in three sizes for tidy shelves.", details: "[Replace] Hand-woven, nesting design, sizes S, M and L.", available: true, featured: false, tags: [] }
 ];
 
+/* Products added from assets/images/products folder */
+PRODUCTS.push(
+  { id: 9, name: "Butter Cookies", category: "Groceries", price: 2500, image: "assets/images/products/Butter Cookies.JPG", images: [], description: "Crunchy butter cookies — 200g pack.", details: "200g pack. Best before date on the back.", available: true, featured: false, tags: [] },
+  { id: 10, name: "Hot Chocholate", category: "Groceries", price: 3000, image: "assets/images/products/Hot Chocholate.JPG", images: [], description: "Instant hot chocolate sachets — 10-pack.", details: "Makes a rich hot chocolate drink. Easy to prepare.", available: true, featured: false, tags: [] },
+  { id: 11, name: "Indoor and Outdoor Lantern", category: "Home & Living", price: 14000, image: "assets/images/products/Indoor and Outdoor Lantern.JPG", images: [], description: "Battery-powered lantern with adjustable brightness.", details: "Lightweight, weather-resistant, runs on 3 AA batteries (not included).", available: true, featured: false, tags: [] },
+  { id: 12, name: "Kitchen Knives and Spoons", category: "Kitchen", price: 9500, image: "assets/images/products/Kitchen Knives and Spoons.JPG", images: [], description: "6-piece stainless steel cutlery set.", details: "Includes knives, spoons and forks. Dishwasher safe.", available: true, featured: false, tags: [] },
+  { id: 13, name: "Kitchen Pots and Pans", category: "Kitchen", price: 22000, image: "assets/images/products/Kitchen Pots and Pans.JPG", images: [], description: "3-piece non-stick pots and pans set.", details: "Durable non-stick coating, suitable for gas and electric stoves.", available: true, featured: false, tags: [] },
+  { id: 14, name: "Olay Bathing Soup", category: "Personal Care", price: 4500, image: "assets/images/products/Olay Bathing Soup.JPG", images: [], description: "Moisturizing body wash — 250ml.", details: "Gently cleanses and moisturizes skin. Dermatologically tested.", available: true, featured: false, tags: [] },
+  { id: 15, name: "Shoes for all ages", category: "Footwear", price: 28000, image: "assets/images/products/Shoes for all ages.JPG", images: [], description: "Unisex canvas shoes — multiple sizes.", details: "Comfortable canvas upper with rubber sole. See size chart.", available: true, featured: false, tags: [] },
+  { id: 16, name: "Swiss Miss", category: "Groceries", price: 2800, image: "assets/images/products/Swiss Miss.JPG", images: [], description: "Swiss Miss hot cocoa mix — jar.", details: "Classic cocoa mix for a warm drink. 250g jar.", available: true, featured: false, tags: [] }
+);
+
 /* Filter buttons. Use { tag } or { category }; edit freely. */
 const FILTERS = [
   { label: "All" },
